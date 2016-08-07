@@ -1,0 +1,122 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="startCodeScale"
+            android:text="Code Scale" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="startXmlScale"
+            android:text="Xml Scale" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="startCodeRotate"
+            android:text="Code Rotate" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="startXmlRotate"
+            android:text="Xml Rotate" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="startCodeAlpha"
+            android:text="Code Alpha" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="startXmlAlpha"
+            android:text="Xml Alpha" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="startCodeTranslate"
+            android:text="Code Translation" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="startXmlTranslate"
+            android:text="Xml Translation" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="startCodeAnimationSet"
+            android:text="Code AnimationSet" 
+            android:textSize="15sp"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="startXmlAnimationSet"
+            android:text="Xml AnimationSet" 
+            android:textSize="15sp"/>
+    </LinearLayout>
+    
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="testAnimationListener"
+            android:text="Test Animation Listener"/>
+
+    <ImageView
+        android:id="@+id/iv_animation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo" 
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/tv_animation_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示动画描述信息" 
+        android:textSize="18dp"/>
+</LinearLayout>

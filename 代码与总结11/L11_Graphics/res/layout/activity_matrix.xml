@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dp">
+	<LinearLayout  
+		android:layout_marginTop="10dip"
+   		android:layout_width="fill_parent"
+    	android:layout_height="50dip"
+    	android:orientation="horizontal">
+    	<EditText android:id="@+id/et_matrix_scale"
+    		android:layout_weight="1.0"
+    		android:layout_width="fill_parent" 
+    		android:layout_height="wrap_content" 
+    		android:hint="缩放比例"
+    		android:text="0.25"/>
+   		<EditText android:id="@+id/et_matrix_rotate"
+   			android:layout_weight="1.0"
+    		android:layout_width="fill_parent" 
+    		android:layout_height="wrap_content" 
+    		android:text="30"
+    		android:hint="旋转角度"
+   			android:onClick="rotateBitmap"/>
+   		<EditText android:id="@+id/et_matrix_translateX"
+   			android:layout_weight="1.0" 
+    		android:layout_width="fill_parent" 
+    		android:layout_height="wrap_content" 
+    		android:text="10"
+    		android:hint="X偏移"/>
+    	<EditText android:id="@+id/et_matrix_translateY"
+    		android:layout_weight="1.0" 
+    		android:layout_width="fill_parent" 
+    		android:layout_height="wrap_content" 
+    		android:text="10"
+    		android:hint="y偏移"/>
+    </LinearLayout>
+    
+	<LinearLayout android:layout_marginTop="10dip"
+   		android:layout_width="fill_parent"
+    	android:layout_height="50dip"
+    	android:orientation="horizontal">
+    	<Button android:layout_weight="1.0"
+    		android:layout_width="fill_parent" 
+    		android:layout_height="wrap_content" 
+    		android:text="缩放"
+   			android:onClick="scaleBitmap"/>
+   		<Button android:layout_weight="1.0"
+    		android:layout_width="fill_parent" 
+    		android:layout_height="wrap_content" 
+    		android:text="旋转"
+   			android:onClick="rotateBitmap"/>
+   		<Button android:layout_weight="1.0" 
+    		android:layout_width="fill_parent" 
+    		android:layout_height="wrap_content" 
+    		android:text="移动"
+   			android:onClick="translateBitmap"/>
+   		<Button android:layout_weight="1.0" 
+    		android:layout_width="fill_parent" 
+    		android:layout_height="wrap_content" 
+    		android:text="还原"
+   			android:onClick="clearMatrix"/>
+    </LinearLayout>
+    
+    <ImageView android:id="@+id/iv_matrix_icon"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="fill_parent" 
+	    android:src="@drawable/ic_launcher"
+	    android:scaleType="matrix"/>
+	   
+</LinearLayout>

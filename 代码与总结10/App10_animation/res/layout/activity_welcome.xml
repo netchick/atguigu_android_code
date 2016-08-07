@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_welcome_root"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    
+    <ProgressBar
+        android:id="@+id/pb_welcome_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:indeterminateDrawable="@anim/image_progress"
+        android:indeterminateDuration="700"/>
+    
+    <TextView
+        android:id="@+id/tv_welcome_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/pb_welcome_loading"
+        android:layout_marginBottom="10dp"
+        android:text="当前版本: 1.0"
+        android:textSize="20sp" />
+    
+
+</RelativeLayout>

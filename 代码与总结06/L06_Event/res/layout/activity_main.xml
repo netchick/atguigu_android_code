@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btn_main_test1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击启动MotionEvent测试" 
+        android:textSize="20dp"/>
+
+    <Button
+        android:id="@+id/btn_main_test2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="长按启动KeyEvent测试" 
+        android:textSize="20dp"/>
+</LinearLayout>

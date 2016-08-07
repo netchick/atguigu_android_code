@@ -1,0 +1,17 @@
+HelloAndroid
+	--src(源码文本夹)
+		MainActivity.java: 主界面类
+	--gen(自动生成的源码文本夹)
+		R.java : 对应res文件夹
+			drawble : 图片
+			layout : 布局
+			string : 字符串
+	--res(资源文件夹)
+		drawable-xxx : 图片文件夹
+			为了适配不同分辨率的手机
+		layout : 界面的布局文件
+			功能类似于HTML
+		values : 常量文件夹
+			strings.xml : 包含固定的字符串, 在布局中引用: @string/name
+	--AndroidManifest.xml(功能清单文件)	
+			

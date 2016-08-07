@@ -1,0 +1,45 @@
+1. 搭建服务器端
+2. 界面布局
+	整体 : ListView+提示视图
+	Item :　LinearLayout
+3. 动态显示列表
+	使用Handler+Thread处理联网请求, 得到json数据, 解析成List<ShopInfo>
+	使用BaseAdapter显示文本列表
+	根据url, 异步请求显示图片(使用三级缓存)
+
+4. 动态显示列表中的图片
+	--->Bitmap--->手机本地的图片文件--->服务器端的图片文件
+1). 图片的三级缓存
+	一级缓存: 内存缓存, 缓存的是bitmap对象, 用Map<String, Bitmap>结构保存, key是url
+	二级缓存: 本地(sd卡)缓存, 缓存的是图片文件,  /storage/sdcard/Android/data/packageName/files/图片文件名(xxx.jpg) 
+	三级缓存: 远程服务器缓存, 缓存的是图片文件, 远程服务器上的应用中
+2). 如何使用三级缓存?  -----如何根据图片的url动态显示图片?    
+	String iamgePath = http://192.168.10.165:8080//L05_Web/images/f10.jpg和ImageView对象
+	1). 根据url从一级缓存中取对应的bitmap对象
+		如果有, 显示(结束)
+		如果没有, 进入2)
+	2). 从二级缓存中查找: 得到文件名并在sd卡的缓存目录下加载对应的图片得到Bitmap对象
+		如果有: 显示, 缓存到一级缓存中(结束)
+		如果没有, 进入3)
+	3). 显示代表提示正在加载的图片, 启动分线程联网请求得到Bitmap对象
+			如果没有: 显示提示错误的图片(结束)
+			如果有: 
+				显示
+				缓存到一级缓存
+				缓存到二级缓存
+3). 在ListView使用图片三级缓存会存在图片闪动的bug
+	1). 原因
+		converView被复用了
+	2). 解决
+		a. 每次getView()都将图片的url保存到ImageView上: imageView.setTag(imagePath)
+		b. 在分线程准备请求服务器加载图片之前, 比较准备加载图片的url与ImageView中保存的最新图片的url是同一个, 
+			如果不是同一个, 当前加载图片的任务不应该再执行
+			如果相同, 继续执行加载远程图片
+		c. 在主线程准备显示图片之前, 比较加载到图片的url与ImageView中保存的最新图片的url是同一个
+			如果不是同一个, 不需要显示此图片
+			如果相同, 显示图片
+
+	
+	
+	
+	

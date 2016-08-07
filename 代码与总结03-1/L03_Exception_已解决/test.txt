@@ -1,0 +1,33 @@
+测试用例
+1. 不做任何设置或launchMode="standard"
+	操作: -->Main-->Main
+	结果: MainActivity创建了2次
+	结论:　正常情况下每次startActivity()都会创建一个新Activity
+2. 设置MainActivity的launchMode="singleTop"
+	操作: -->Main-->Main
+	结果: MainActivity只创建了1次, 第二次没有再创建
+	结论:　当launchMode="singleTop"时, 如果要启动的Activity已经在栈顶, 不会再创建
+	
+	操作: -->Main-->Secend-->Main
+	结果: MainActivity创建了2次
+	结论:　当launchMode="singleTop"时, 如果要启动的Activity不在栈顶, 也会再创建
+
+3. 设置MainActivity的launchMode="singleTask | singleInstance"
+	操作: -->Main-->Secend-->Main
+	结果: MainActivity创建了1次
+	结论:　当launchMode="singleTop | singleInstance"时, Activity对象都只会有一个, 所有不会再创建
+
+区别singleTask与singleInstance(了解)
+	设置: 对SecendActivity的launchMode属性分别设置singleTask和singleInstance
+	操作: --->Main--->Secend--->Third 
+		launchMode="singleTask"
+			点第一次返回--->Secend
+			点第二次返回--->Main
+		launchMode="singleInstance"
+			点第一次返回--->Main
+			点第二次返回--->Secend
+
+			
+			
+			
+			

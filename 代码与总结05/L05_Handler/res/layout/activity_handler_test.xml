@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ProgressBar
+        android:id="@+id/pb_handler1_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" 
+        android:visibility="invisible"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="getSubmit1"
+        android:text="GET Submit" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="getSubmit2"
+        android:text="GET Submit2" />
+
+    <EditText
+        android:id="@+id/et_handler1_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="显示结果" >
+    </EditText>
+</LinearLayout>

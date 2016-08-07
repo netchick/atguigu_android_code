@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <Button
+        android:id="@+id/btn_main_start"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="启动来电监听"
+        android:onClick="startListenCall" />
+    
+     <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="停止来电监听"
+        android:onClick="stopListenCall" 
+        android:layout_below="@id/btn_main_start"
+        />
+
+</RelativeLayout>

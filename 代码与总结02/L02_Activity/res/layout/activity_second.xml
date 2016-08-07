@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/et_second_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:hint="请输入您的信息">
+    </EditText>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="一般返回" 
+        android:onClick="back1"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="带结果的返回" 
+        android:onClick="back2"/>
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+##测试sp存储_保存
+1. 得到sp对象
+2. 得到editor对象
+3. 得到输入的key/value
+4. 使用editor保存key-value
+5. 提示
+
+##测试sp存储_读取
+1. 得到输入的key
+2. 根据key读取对应的value
+3. 显示
+
+##测试手机内部文件存储_保存
+1. 得到InputStream-->读取assets下的logo.png
+2. 得到OutputStream-->/data/data/packageName/files/logo.png
+3. 边读边写
+4. 提示
+
+##测试手机内部文件存储_读取
+1. 得到图片文件的路径
+2. 读取加载图片文件得到bitmap对象
+3. 将其设置到imageView中显示
+
+##测试手机外部文件存储_保存
+1. 判断sd卡状态, 如果是挂载的状态才继续, 否则提示
+2. 读取输入的文件名/内容
+3. 得到指定文件的OutputStream
+	1).得到sd卡下的files路径
+	2).组成完整路径
+	3). 创建FileOutputStream
+4. 写数据 
+5. 提示
+
+/storage/sdcard/Android/data/packageName/files/
+

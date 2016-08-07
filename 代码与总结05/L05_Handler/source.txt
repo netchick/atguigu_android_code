@@ -1,0 +1,66 @@
+Message 消息
+	携带数据
+	 public int what;
+
+	 public int arg1; 
+	 public int arg2;
+	 public Object obj;
+
+	 long when;  //保存消息需要被处理的时间
+	 Handler target; //处理消息的handler
+	 Runnable callback;  //可以用来处理消息的回调对象
+	 Message next; //保存下一个message对象的引用(用来实现链表)
+	 static Message sPool; //消息池(缓存可复用的message对象)
+
+	 Message obtain() 使用了sPool
+
+
+Handler
+	sendMessage(Message msg)
+	sendMessageDelayed(Message msg, long delayMillis)
+	sendMessageAtTime(Message msg, long uptimeMillis) 
+	 private boolean enqueueMessage(MessageQueue queue, Message msg, long uptimeMillis) {
+		msg.target = this;//发送消息的handler就是处理消息的handler
+		if (mAsynchronous) {
+		    msg.setAsynchronous(true);
+		}
+		return queue.enqueueMessage(msg, uptimeMillis);
+	  }
+
+
+
+   public void dispatchMessage(Message msg) {
+        if (msg.callback != null) {
+           message.callback.run();//如果message有回调监听对象, 让它处理消息
+        } else {
+            if (mCallback != null) {
+		//如果Handler中设置了回调监听器, 就调用它的处理消息的方法
+                if (mCallback.handleMessage(msg)) {
+			//如果返回true, 就结束
+			//如果返回false, 还会调用handleMessage()
+                    return;
+                }
+            }
+	    //如果上面都没有处理, 调用此方法处理
+            handleMessage(msg);
+        }
+    }
+
+MessageQueue
+	boolean enqueueMessage(Message msg, long when) {//将消息添加到消息队列中
+
+		msg.when = when; 
+		将消息添加到消息队列
+		唤醒Looper
+Looper
+	public static void loop() {
+
+		 for (;;) {//死循环
+			Message msg = queue.next(); //从消息队列中取消息, 如果没有得到合适就会进入等待状态
+
+			msg.target.dispatchMessage(msg);//Handler分发并处理消息
+			
+			msg.recycle();//回收消息(清理数据,保存到消息池中)
+		}
+
+	}

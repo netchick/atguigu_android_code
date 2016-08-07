@@ -1,0 +1,19 @@
+1. 界面布局
+2. 给ImageView设置Touch监听
+lastX
+lastY
+eventX = event.getRawX() 
+eventY = event.getRawY()
+down时
+	lastX = eventX
+	lastY = eventY;
+move时
+	dx = eventX-lastX;
+	dy = eventY-lastY;
+	left = imageView.getLeft()+dx;
+	top = imageView.getTop()+dy;
+	right = imageVIew.getRight()+dx;
+	bottom = imageView.getBottom()+dy
+	imageView.layout(left, top, right,bottom)
+	lastX = eventX;
+	lastY = eventY;

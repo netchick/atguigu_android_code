@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromDegrees="90" 
+    android:toDegrees="-90"
+    android:duration="5000">
+    
+</rotate>
+<!-- 以左顶点为坐标, 从正90度到负90度, 持续5s -->

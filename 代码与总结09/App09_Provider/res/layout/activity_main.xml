@@ -1,0 +1,20 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <EditText
+        android:id="@+id/et_main_number"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入或选择一个联系人号码" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_main_number"
+        android:text="选择联系人" 
+        android:onClick="toContactList"/>
+
+</RelativeLayout>

@@ -1,0 +1,119 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (javaClasses.cpp:129), pid=4356, tid=6184
+#  fatal error: Invalid layout of preloaded class
+#
+# JRE version: 7.0_13-b20
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (23.7-b01 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000024fc800):  JavaThread "Unknown thread" [_thread_in_vm, id=6184, stack(0x0000000002680000,0x0000000002780000)]
+
+Stack: [0x0000000002680000,0x0000000002780000]
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00000000024fc800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=6184, stack(0x0000000002680000,0x0000000002780000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.007 loading class 0x00000000025b8990 done
+Event: 0.007 loading class 0x0000000002572370 done
+Event: 0.007 loading class 0x0000000002572340
+Event: 0.007 loading class 0x00000000025c46e0
+Event: 0.007 loading class 0x00000000025c46e0 done
+Event: 0.007 loading class 0x00000000025c4720
+Event: 0.007 loading class 0x00000000025c4720 done
+Event: 0.007 loading class 0x00000000091fc200
+Event: 0.007 loading class 0x00000000091fc200 done
+Event: 0.007 loading class 0x0000000002572340 done
+
+
+Dynamic libraries:
+0x000000013fd20000 - 0x000000013fd53000 	D:\Program Files\Java\jre7\bin\javaw.exe
+0x0000000077720000 - 0x00000000778c8000 	C:\Windows\SYSTEM32\ntdll.dll
+0x0000000077500000 - 0x000000007761f000 	C:\Windows\system32\kernel32.dll
+0x000007fefdcd0000 - 0x000007fefdd3c000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fefe220000 - 0x000007fefe2fb000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefdf50000 - 0x000007fefdfef000 	C:\Windows\system32\msvcrt.dll
+0x000007feff810000 - 0x000007feff82f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007feff830000 - 0x000007feff95d000 	C:\Windows\system32\RPCRT4.dll
+0x0000000077620000 - 0x000000007771a000 	C:\Windows\system32\USER32.dll
+0x000007fefe890000 - 0x000007fefe8f7000 	C:\Windows\system32\GDI32.dll
+0x000007fefe200000 - 0x000007fefe20e000 	C:\Windows\system32\LPK.dll
+0x000007fefe7c0000 - 0x000007fefe889000 	C:\Windows\system32\USP10.dll
+0x000007fefc5c0000 - 0x000007fefc7b4000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18807_none_fa381d5f175bfb52\COMCTL32.dll
+0x000007fefe430000 - 0x000007fefe4a1000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefdff0000 - 0x000007fefe01e000 	C:\Windows\system32\IMM32.DLL
+0x000007fefe300000 - 0x000007fefe409000 	C:\Windows\system32\MSCTF.dll
+0x000007fefdb40000 - 0x000007fefdb72000 	C:\Windows\system32\nvinitx.dll
+0x000007fefdb30000 - 0x000007fefdb3c000 	C:\Windows\system32\VERSION.dll
+0x000000000f000000 - 0x000000000f006000 	C:\Program Files\NVIDIA Corporation\CoProcManager\detoured.dll
+0x000007fefa6a0000 - 0x000007fefa6d2000 	C:\Program Files\NVIDIA Corporation\CoProcManager\nvd3d9wrapx.dll
+0x000007fefe020000 - 0x000007fefe1f7000 	C:\Windows\system32\SETUPAPI.dll
+0x000007fefdc50000 - 0x000007fefdc86000 	C:\Windows\system32\CFGMGR32.dll
+0x000007fefe900000 - 0x000007fefe9d7000 	C:\Windows\system32\OLEAUT32.dll
+0x000007fefe4b0000 - 0x000007fefe6b3000 	C:\Windows\system32\ole32.dll
+0x000007fefdc30000 - 0x000007fefdc4a000 	C:\Windows\system32\DEVOBJ.dll
+0x000007fefa620000 - 0x000007fefa642000 	C:\Program Files\NVIDIA Corporation\CoProcManager\nvdxgiwrapx.dll
+0x0000000061ec0000 - 0x0000000061f91000 	D:\Program Files\Java\jre7\bin\msvcr100.dll
+0x00000000617a0000 - 0x0000000061ebf000 	D:\Program Files\Java\jre7\bin\server\jvm.dll
+0x000007fefb870000 - 0x000007fefb879000 	C:\Windows\system32\WSOCK32.dll
+0x000007feff9e0000 - 0x000007feffa2d000 	C:\Windows\system32\WS2_32.dll
+0x000007fefe210000 - 0x000007fefe218000 	C:\Windows\system32\NSI.dll
+0x000007fefa660000 - 0x000007fefa69b000 	C:\Windows\system32\WINMM.dll
+0x00000000778f0000 - 0x00000000778f7000 	C:\Windows\system32\PSAPI.DLL
+0x000000006cde0000 - 0x000000006cdef000 	D:\Program Files\Java\jre7\bin\verify.dll
+0x0000000061770000 - 0x0000000061798000 	D:\Program Files\Java\jre7\bin\java.dll
+0x0000000061750000 - 0x0000000061765000 	D:\Program Files\Java\jre7\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 -Xbootclasspath:D:\adt-bundle-windows-x64\android-sdk-windows\platforms\android-18\android.jar 
+java_command: com.atguigu.l05_handler.JsonTest
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=D:\Program Files\Java\jdk1.7.0_13
+PATH=C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\VisualSVN Server\bin;D:\Program Files\TortoiseSVN\bin;D:\Program Files\TortoiseGit\bin;D:\adt-bundle-windows-x64\android-sdk-windows\platform-tools;D:\adt-bundle-windows-x64\android-sdk-windows\platform-tools;D:\adt-bundle-windows-x64\android-sdk-windows\tools;D:\Program Files\Java\jdk1.7.0_13\bin;D:\adt-bundle-windows-x64\android-sdk-windows\platform-tools;D:\adt-bundle-windows-x64\android-sdk-windows\tools
+USERNAME=Administrator
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 Service Pack 1
+
+CPU:total 8 (4 cores per cpu, 2 threads per core) family 6 model 60 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, ht, tsc, tscinvbit
+
+Memory: 4k page, physical 4074500k(656064k free), swap 8147148k(3116260k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (23.7-b01) for windows-amd64 JRE (1.7.0_13-b20), built on Jan 30 2013 10:10:00 by "java_re" with unknown MS VC++:1600
+
+time: Mon Sep 07 15:10:33 2015
+elapsed time: 0 seconds
+

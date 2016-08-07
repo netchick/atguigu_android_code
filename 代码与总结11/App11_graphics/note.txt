@@ -1,0 +1,20 @@
+1. pw的布局
+	1). 背景图片是一个9path图片
+	2). 整体的布局: 水平的LinearLayout
+	3). 多状态背景: selector+shape
+2. 点击item显示pw
+3. 滑动移除正在显示的pw
+
+
+
+
+
+--------------------------------------------
+1. 分析界面结构, 编写布局文件	
+	1). 整体的布局: ListView
+	2). item的布局: RelativeLayout
+2. 使用ListView+BaseAdapter显示所有应用信息的列表
+	1). 得到所有应用信息数据对象的集合List<AppInfo>
+	2). 定义BaseAdapter的实现类:  getView()
+3. 给ListView设置item的点击监听, 在回调方法中做响应
+4. 给LitView设置Item的长按监听, 在回调方法中做响应

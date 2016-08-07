@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>Web_server</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<description></description>
+		<display-name>ShopListServlet</display-name>
+		<servlet-name>ShopListServlet</servlet-name>
+		<servlet-class>com.atguigu.web.servlet.ShopListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShopListServlet</servlet-name>
+		<url-pattern>/ShopListServlet</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+		<display-name>SleepFilter</display-name>
+		<filter-name>SleepFilter</filter-name>
+		<filter-class>com.atguigu.web.servlet.SleepFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>SleepFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+</web-app>

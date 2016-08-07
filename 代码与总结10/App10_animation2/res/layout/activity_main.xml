@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="手机杀毒" 
+        android:background="#FFCFCE"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:padding="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" 
+            android:background="@drawable/ic_scanner_malware">
+
+            <ImageView
+                android:id="@+id/iv_main_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/act_scanning_03" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" 
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:id="@+id/tv_main_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <ProgressBar
+                android:id="@+id/pb_main_scan"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:progressDrawable="@drawable/my_progress"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

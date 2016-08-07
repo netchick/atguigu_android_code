@@ -1,0 +1,4 @@
+1. 界面布局
+2. 在Activity定义需要操作视图的成员变量, 并在onCreate()查找得到此对象
+3. 给视图对象设置点击监听(创建匿名内部类对象 ),实现回调方法
+4. 显示Toast文本小提示(MainActivity.this-->Context)

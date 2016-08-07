@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电话号码: " />
+
+        <EditText
+            android:id="@+id/et_main_number"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入号码">
+        </EditText>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="短信内容: " />
+
+        <EditText
+            android:id="@+id/et_main_sms"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入短信">
+        </EditText>
+    </LinearLayout>
+    
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/btn_main_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="打电话" />
+
+        <Button
+            android:id="@+id/btn_main_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发短信" />
+
+    </LinearLayout>
+
+</LinearLayout>

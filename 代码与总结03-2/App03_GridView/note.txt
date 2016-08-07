@@ -1,0 +1,5 @@
+1. 界面布局
+	1). 整体
+	2). item
+2. 使用GridView+BaseApdater显示界面
+3. 给GridView设置item的点击监听, 并做响应

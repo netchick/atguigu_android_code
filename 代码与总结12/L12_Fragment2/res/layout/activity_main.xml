@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:orientation="vertical">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+        <Button
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="wrap_content"
+	        android:text="显示fragment2" 
+	        android:onClick="showFragment2"/>
+        
+        <Button
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="wrap_content"
+	        android:text="移除fragment2" 
+	        android:onClick="deleteFragment2"/>
+    </LinearLayout>
+
+    <LinearLayout 
+	    android:id="@+id/ll_main_container"
+        android:layout_width="fill_parent"
+	    android:layout_height="fill_parent" 
+	    android:orientation="horizontal">
+    </LinearLayout>
+</LinearLayout>

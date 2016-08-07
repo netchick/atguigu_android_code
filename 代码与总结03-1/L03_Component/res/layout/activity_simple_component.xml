@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_simple_message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:text="这是TextView的内容"
+        android:background="#999999"
+        android:textColor="#ff0000"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/et_simple_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:hint="请输入手机号"
+        android:inputType="phone">
+    </EditText>
+
+    <Button
+        android:id="@+id/btn_simple_submit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="提交" />
+
+    <ImageView
+        android:id="@+id/iv_simple_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/alert_dark_frame" 
+        android:src="@android:drawable/ic_media_play"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="爱好: " />
+
+        <CheckBox
+            android:id="@+id/cb_simple_basket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="篮球" />
+        <CheckBox
+            android:id="@+id/cb_simple_foot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="足球" />
+        <CheckBox
+            android:id="@+id/cb_simple_pingpang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="乒乓" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确定" 
+            android:onClick="confirm"/>
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_simple_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_simple_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="男" />
+
+        <RadioButton
+            android:id="@+id/rb_simple_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="女" 
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/rb_simple_nomale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="东方不败" />
+    </RadioGroup>
+    
+</LinearLayout>

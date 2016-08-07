@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/myStyle"
+        android:text="SIM卡变更报警"/>
+    
+    <TextView
+        style="@style/myStyle"
+        android:text="GPS定位" />
+    
+    <TextView
+        android:text="远程销毁数据" 
+        style="@style/myStyle"
+        android:textColor="#00ff00"/>
+    
+    <TextView
+        android:text="远程锁屏" 
+        style="@style/myStyle"/>
+    
+     <TextView
+        android:text="xxxxx" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@android:style/TextAppearance"/>
+</LinearLayout>

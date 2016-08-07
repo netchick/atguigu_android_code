@@ -1,0 +1,40 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <!-- 
+    	android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:gravity="center_vertical"
+        android:textSize="20sp"
+        android:layout_marginLeft="10dp"
+         -->
+    <style name="myStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawableLeft">@android:drawable/star_big_on</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+    </style>
+    
+    <style name="myTheme">
+         <item name="android:textColor">#ff0000</item>
+    </style>
+
+</resources>

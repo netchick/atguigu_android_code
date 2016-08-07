@@ -1,0 +1,24 @@
+1. 界面布局
+	1). 分析: 垂直的LinearLayout--->水平的LinearLayout
+	2). 编码
+2. 在Activity中初始化需要操作的视图对象
+3. 给button设置点击监听
+4. 给button设置长按监听
+5. 点击打电话进入拨号界面
+	1). 创建一个Intent(隐式)
+	2). 携带数据
+	3). startActivity(intent)
+	
+6. 长按打电话进入打电话的界面
+	1). 创建一个Intent(隐式)
+	2). 携带数据
+	3). startActivity(intent)
+	
+7. 点击发短信进入短信编辑界面
+	1). 创建一个Intent(隐式)
+	2). 携带数据(号码/内容)
+	3). startActivity(intent)
+	
+8. 长按发短信直接发短信
+	1). 得到SmsManager的对象
+	2). 发送文本信息(短信)

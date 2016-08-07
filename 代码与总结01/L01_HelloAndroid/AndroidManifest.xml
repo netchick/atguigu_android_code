@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	package属性: 指定当前应用的唯一包名(标识, 不能的应用此值不相同)
+	versionName属性: 指定应用的版本号
+ -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.atguigu.helloandroid"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!-- 
+    	对手机的版本进行要求:
+    	minSdkVersion: 最小的版本,如果手机的版本小于此值, 不能安装此应用
+    	targetSdkVersion: 最佳的版本, 手机的版本可以大于此值
+     -->
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <!-- 
+    	icon : 应用的图标
+    	label : 应用的名称
+     -->
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <!-- 
+        	activity标签 : 配置我们的Activity类
+        	name属性: 全类名, 可以省略包名部分
+        	label属性: 界面的标题
+         -->
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <!-- 让当前Actvity成为主界面Activity -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
